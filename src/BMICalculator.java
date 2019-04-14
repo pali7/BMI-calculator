@@ -1,17 +1,15 @@
-
-import java.lang.Math;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class BMICalculator {
 
     public static void main(String[] args) {
-      
         Scanner input = new Scanner(System.in);
-double weight;
+
+        double weight;
         int feet;
         int inches;
-
-        System.out.print("Enter weight in pounds: ");
+System.out.print("Enter weight in pounds: ");
         weight = input.nextFloat();
 
         System.out.print("Enter feet: ");
@@ -19,6 +17,7 @@ double weight;
 
         System.out.print("Enter inches: ");
         inches = input.nextInt();
+
         double weightInKilos = weight * 0.453592;
         double heightInMeters = (((feet * 12) + inches) * .0254);
         double bmi = weightInKilos / Math.pow(heightInMeters, 2.0);
@@ -27,21 +26,20 @@ double weight;
 
         if (bmi < 18.5 ) {
             System.out.print("Underweight");
-        }
-        else if (bmi >= 18.5 && bmi < 25) {
+              }
+
+        else if (bmi >= 18.5 && bmi < 24.9) {
             System.out.print("Normal");
         }
 
-        else if (bmi >= 25 && bmi < 30) {
+        else if (bmi >= 24.9 && bmi < 30) {
             System.out.print("Overweight");
         }
 
         else if (bmi >= 30) {
-            System.out.print("Obese");
+            System.out.print("Obesity");
         }
-
-
 
         input.close();
     }
-}
+    }
